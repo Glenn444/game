@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-float-up {
+  animation: float-up 1s ease-out forwards;
+}
+
+.animate-pop-in {
+  animation: pop-in 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out forwards;
+}
+
+:root {
+  --connection-bg: theme('colors.white');
+  --connection-border: theme('colors.gray.200');
+  --connection-text: theme('colors.gray.800');
+}
+
+.dark {
+  --connection-bg: theme('colors.gray.800');
+  --connection-border: theme('colors.gray.700');
+  --connection-text: theme('colors.gray.200');
+}
+
+.connection-card {
+  background-color: var(--connection-bg);
+  border-color: var(--connection-border);
+  color: var(--connection-text);
+}
