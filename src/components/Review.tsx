@@ -4,8 +4,8 @@ import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import { FaThumbsUp,FaThumbsDown  } from "react-icons/fa";
 
 // Initialize Supabase client - you'll need to replace these with your own values
-const supabaseUrl = 'https://tvvxoveoblqawijmyuxo.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR2dnhvdmVvYmxxYXdpam15dXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ3ODAyNTQsImV4cCI6MjA2MDM1NjI1NH0.gzPjBbkFA4b5A8ZKo7_-kiFxHVAFRiTWDyQ1VbnJNNw';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const SupabaseFeedbackSystem = ({ contentId = 'default-content' }) => {
