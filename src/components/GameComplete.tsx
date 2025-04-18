@@ -73,6 +73,7 @@ export function GameComplete({ score, path, wrongChoices, correctPath, onPlayAga
     to: correctPath[index + 1]
   }));
 
+
   // Function to determine connection type and style
   const getConnectionInfo = (explanation: string = "") => {
     const lowerExp = explanation.toLowerCase();
@@ -228,7 +229,7 @@ export function GameComplete({ score, path, wrongChoices, correctPath, onPlayAga
             <h3 className={`text-sm font-semibold mb-1.5 text-center ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>Word Connection Path</h3>
             <div className="flex items-center justify-center gap-1 flex-wrap px-1">
               {correctPath.map((word, index) => (
-                <React.Fragment key={word.word}>
+                <React.Fragment key={`${word.word}-${index}`}>
                   <div className={`px-3 py-1 ${
                     word.type === 'start' ? `${darkMode ? 'bg-green-900/30 border-green-500' : 'bg-green-100 border-green-500'}` :
                     word.type === 'target' ? `${darkMode ? 'bg-blue-900/30 border-blue-500' : 'bg-blue-100 border-blue-500'}` :
@@ -252,7 +253,11 @@ export function GameComplete({ score, path, wrongChoices, correctPath, onPlayAga
             </h3>
             <div className="space-y-2">
               {wordPairs.map((pair, index) => {
+             
+                
                 const connectionInfo = getConnectionInfo(pair.to.explanation);
+              
+                
                 return (
                   <div key={index} className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg p-2`}>
                     <div className="flex items-center justify-between mb-1.5">

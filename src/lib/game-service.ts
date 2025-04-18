@@ -1,7 +1,7 @@
 import { DailyFact } from '../types'
 import { wordPaths } from './wordPaths'
 
-let currentPathIndex = 0
+let currentPathIndex = Math.floor(Math.random() * wordPaths.length)
 let currentPath = wordPaths[currentPathIndex] // Track current path
 let currentStep = 0 // Track current step in path
 

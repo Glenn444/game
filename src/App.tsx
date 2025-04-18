@@ -6,6 +6,8 @@ import { HomeScreen } from './components/HomeScreen';
 import { Tutorial } from './components/Tutorial';
 import { GameComplete } from './components/GameComplete';
 import { getDailyFact, getDailyWordPath, saveGameResult, getCurrentWordPath } from './lib/game-service';
+import SupabaseFeedbackSystem from './components/Review';
+
 
 function shuffleChoices(choices: WordChoice[]): WordChoice[] {
   return [...choices].sort(() => Math.random() - 0.5);
@@ -111,6 +113,8 @@ function App() {
   };
 
   const handleWordSelect = async (word: string) => {
+  
+    
     const selectedChoice = gameState.currentChoices.find(choice => choice.word === word);
     const currentWordPath = getCurrentWordPath();
     
@@ -125,7 +129,8 @@ function App() {
       const newSelectedWords = [...prev.selectedWords, word];
       const newRound = prev.round + 1;
       const isGameComplete = newRound > 3;
-      const newWrongChoices = selectedChoice?.type === 'red' ? 
+      
+      const newWrongChoices = selectedChoice?.type === 'red' || selectedChoice?.type === 'yellow' ? 
         [...prev.wrongChoices, word] : prev.wrongChoices;
       const points = selectedChoice?.points || 0;
       
@@ -150,6 +155,7 @@ function App() {
       };
 
       if (isGameComplete) {
+        
         saveGameResult(
           newState.score,
           [...newSelectedWords, gameState.targetWord],
@@ -191,7 +197,7 @@ function App() {
             type: "green",
             explanation: gameState.explanations[index]
           })),
-          { word: gameState.targetWord, type: "target" }
+          { word: gameState.targetWord, type: "target",explanation: gameState.explanations[3] }
         ]}
         onPlayAgain={handlePlayAgain}
         darkMode={darkMode}
@@ -225,6 +231,7 @@ function App() {
         pointsHistory={pointsHistory}
         darkMode={darkMode}
       />
+      <SupabaseFeedbackSystem />
     </div>
   );
 }

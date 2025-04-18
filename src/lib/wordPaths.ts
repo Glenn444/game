@@ -1,7 +1,7 @@
 export const wordPaths = [
   {
     start_word: 'LIGHT',
-    target_word: 'IMAGINATION',
+    target_word: 'DREAM',
     theme: 'Illumination to Creativity',
     choices: [
       [
@@ -24,30 +24,23 @@ export const wordPaths = [
         { word: 'VISION', type: 'yellow', points: 75 },
         { word: 'FANTASY', type: 'red', points: 50 },
       ],
-      [
-        { word: 'IMAGINATION', type: 'green', points: 100 },
-        { word: 'IDEA', type: 'yellow', points: 75 },
-        { word: 'THOUGHT', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'Think about what light creates when it hits an object.',
-      2: 'What is a shadow considered a form of?',
-      3: 'What is often associated with darkness?',
-      4: 'What occurs during sleep?',
-      5: 'What are dreams a product of?',
+      1: 'A result of light is...',
+      2: 'A type of light absence is...',
+      3: 'Often happens after being...',
+      4: 'Occurs during...',
     },
     explanations: [
       'Light creates shadows.',
       'A shadow is a form of darkness.',
       'Darkness is often associated with sleep.',
       'Dreams occur during sleep.',
-      'Dreams are a product of imagination.',
     ],
   },
   {
     start_word: 'CITY',
-    target_word: 'EARTHQUAKE',
+    target_word: 'VIBRATION',
     theme: 'Urban to Natural Forces',
     choices: [
       [
@@ -70,30 +63,23 @@ export const wordPaths = [
         { word: 'WAVE', type: 'yellow', points: 75 },
         { word: 'MUSIC', type: 'red', points: 50 },
       ],
-      [
-        { word: 'EARTHQUAKE', type: 'green', points: 100 },
-        { word: 'SHAKE', type: 'yellow', points: 75 },
-        { word: 'TREMOR', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What do cities often have a lot of?',
-      2: 'What is common in traffic?',
-      3: 'What does a horn produce?',
-      4: 'What form is sound?',
-      5: 'What involves ground vibrations?',
+      1: 'City often has...',
+      2: 'Common sound in traffic is...',
+      3: 'A type of sensory perception is...',
+      4: 'A physical wave of movement is...',
     },
     explanations: [
       'Cities often have a lot of traffic.',
       'Car horns are common in traffic.',
       'A horn produces a sound.',
       'Sound is a form of vibration.',
-      'Earthquakes involve ground vibrations.',
     ],
   },
   {
     start_word: 'WATER',
-    target_word: 'VIEW',
+    target_word: 'WINDOW',
     theme: 'Necessity to Perspective',
     choices: [
       [
@@ -116,30 +102,23 @@ export const wordPaths = [
         { word: 'MIRROR', type: 'yellow', points: 75 },
         { word: 'BOTTLE', type: 'red', points: 50 },
       ],
-      [
-        { word: 'VIEW', type: 'green', points: 100 },
-        { word: 'FRAME', type: 'yellow', points: 75 },
-        { word: 'CURTAIN', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What does lack of water cause?',
-      2: 'What does thirst make you want to do?',
-      3: 'What are drinks often served in?',
-      4: 'What else is made of glass?',
-      5: 'What do windows offer?',
+      1: 'Caused by lack of...',
+      2: 'An action involving...',
+      3: 'Often made of...',
+      4: 'A view is seen through a...',
     },
     explanations: [
       'Lack of water causes thirst.',
       'Thirst makes you want to drink.',
       'Drinks are often served in a glass.',
       'Windows are made of glass.',
-      'Windows offer a view.',
     ],
   },
   {
     start_word: 'FOOD',
-    target_word: 'CYCLE',
+    target_word: 'WHEEL',
     theme: 'Sustenance to Continuity',
     choices: [
       [
@@ -162,30 +141,23 @@ export const wordPaths = [
         { word: 'ENGINE', type: 'yellow', points: 75 },
         { word: 'FARMER', type: 'red', points: 50 },
       ],
-      [
-        { word: 'CYCLE', type: 'green', points: 100 },
-        { word: 'TIRE', type: 'yellow', points: 75 },
-        { word: 'ROUND', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What does lack of food cause?',
-      2: 'Where is food produced?',
-      3: 'What is used on farms?',
-      4: 'What does a tractor have?',
-      5: 'What else has wheels?',
+      1: 'Caused by lack of...',
+      2: 'A place that produces...',
+      3: 'Used on an agricultural location...',
+      4: 'A circular component of...',
     },
     explanations: [
       'Lack of food causes hunger.',
       'Farms produce food.',
       'Tractors are used on farms.',
       'A tractor has wheels.',
-      'A cycle has wheels.',
     ],
   },
   {
     start_word: 'MONEY',
-    target_word: 'GRASS',
+    target_word: 'FIELD',
     theme: 'Value to Nature',
     choices: [
       [
@@ -208,30 +180,23 @@ export const wordPaths = [
         { word: 'MILK', type: 'yellow', points: 75 },
         { word: 'FARM', type: 'red', points: 50 },
       ],
-      [
-        { word: 'GRASS', type: 'green', points: 100 },
-        { word: 'CROP', type: 'yellow', points: 75 },
-        { word: 'MEADOW', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'Where is money often kept?',
-      2: 'What are wallets often made of?',
-      3: 'Where does leather come from?',
-      4: 'Where do cows graze?',
-      5: 'What covers fields?',
+      1: 'Often kept in a...',
+      2: 'Material often used for...',
+      3: 'A source of leather is a...',
+      4: 'Where cows graze is a...',
     },
     explanations: [
       'Money is often kept in a wallet.',
       'Wallets are often made of leather.',
       'Leather comes from cows.',
       'Cows graze in fields.',
-      'Fields are covered in grass.',
     ],
   },
   {
     start_word: 'STORY',
-    target_word: 'PROBLEM',
+    target_word: 'MATHEMATICS',
     theme: 'Narrative to Challenge',
     choices: [
       [
@@ -254,30 +219,23 @@ export const wordPaths = [
         { word: 'ADDING', type: 'yellow', points: 75 },
         { word: 'SEQUENCE', type: 'red', points: 50 },
       ],
-      [
-        { word: 'PROBLEM', type: 'green', points: 100 },
-        { word: 'EQUATION', type: 'yellow', points: 75 },
-        { word: 'FORMULA', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What is a story written on?',
-      2: 'What do pages usually have?',
-      3: 'What are numbers used for?',
-      4: 'What field includes counting as a basic concept?',
-      5: 'What does mathematics often involve solving?',
+      1: 'A part of a book is a...',
+      2: 'A key element of text is...',
+      3: 'A basic mathematical action is...',
+      4: 'A field of numerical reasoning is...',
     },
     explanations: [
       'A story is written on pages.',
       'Pages are usually numbered.',
       'Numbers are used for counting.',
       'Counting is a basic concept in mathematics.',
-      'Mathematics often involves solving problems.',
     ],
   },
   {
     start_word: 'WIND',
-    target_word: 'SURFING',
+    target_word: 'WAVE',
     theme: 'Elements to Recreation',
     choices: [
       [
@@ -300,30 +258,23 @@ export const wordPaths = [
         { word: 'OCEAN', type: 'yellow', points: 75 },
         { word: 'SALT', type: 'red', points: 50 },
       ],
-      [
-        { word: 'SURFING', type: 'green', points: 100 },
-        { word: 'CREST', type: 'yellow', points: 75 },
-        { word: 'TIDE', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What can wind power?',
-      2: 'Where are sails used?',
-      3: 'Where do boats travel?',
-      4: 'What does the sea have?',
-      5: 'What do people do on waves?',
+      1: 'Used for powering...',
+      2: 'A mode of water transportation is...',
+      3: 'A large body of water is...',
+      4: 'A movement of water is a...',
     },
     explanations: [
       'Wind can power a sail.',
       'Sails are used on boats.',
       'Boats travel on the sea.',
       'The sea has waves.',
-      'People surf on waves.',
     ],
   },
   {
     start_word: 'ART',
-    target_word: 'THINKING',
+    target_word: 'HEAD',
     theme: 'Creation to Cognition',
     choices: [
       [
@@ -346,30 +297,23 @@ export const wordPaths = [
         { word: 'COMB', type: 'yellow', points: 75 },
         { word: 'FACE', type: 'red', points: 50 },
       ],
-      [
-        { word: 'THINKING', type: 'green', points: 100 },
-        { word: 'BRAIN', type: 'yellow', points: 75 },
-        { word: 'MIND', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What is used to create art?',
-      2: 'What is used to apply paint?',
-      3: 'What are brush bristles made of?',
-      4: 'Where does hair grow?',
-      5: 'What occurs in the head?',
+      1: 'A tool for creating art is...',
+      2: 'Used for applying color is...',
+      3: 'A material used in brushes is...',
+      4: 'Where hair grows is...',
     },
     explanations: [
       'Paint is used to create art.',
       'A brush is used to apply paint.',
       'Brushes often have bristles made of hair or synthetic material.',
       'Hair grows on the head.',
-      'Thinking occurs in the head.',
     ],
   },
   {
     start_word: 'COLD',
-    target_word: 'WALK',
+    target_word: 'FOOT',
     theme: 'Sensation to Motion',
     choices: [
       [
@@ -392,30 +336,23 @@ export const wordPaths = [
         { word: 'LACE', type: 'yellow', points: 75 },
         { word: 'LEATHER', type: 'red', points: 50 },
       ],
-      [
-        { word: 'WALK', type: 'green', points: 100 },
-        { word: 'TOE', type: 'yellow', points: 75 },
-        { word: 'ANKLE', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What can cold temperatures turn water into?',
-      2: 'What do people do on ice?',
-      3: 'What are skates attached to?',
-      4: 'What body part wears shoes?',
-      5: 'What do we use our feet for?',
+      1: 'A solid form of water is...',
+      2: 'An activity on ice is...',
+      3: 'Worn on the body',
+      4: 'A body part used for walking is...',
     },
     explanations: [
       'Cold temperatures can turn water into ice.',
       'People skate on ice.',
       'Skates are attached to shoes.',
       'Shoes are worn on the foot.',
-      'We use our feet to walk.',
     ],
   },
   {
     start_word: 'MUSIC',
-    target_word: 'LANGUAGE',
+    target_word: 'COMMUNICATION',
     theme: 'Sound to Communication',
     choices: [
       [
@@ -438,25 +375,18 @@ export const wordPaths = [
         { word: 'SENSE', type: 'yellow', points: 75 },
         { word: 'DEAF', type: 'red', points: 50 },
       ],
-      [
-        { word: 'LANGUAGE', type: 'green', points: 100 },
-        { word: 'SPEECH', type: 'yellow', points: 75 },
-        { word: 'MESSAGE', type: 'red', points: 50 },
-      ],
     ],
     hints: {
-      1: 'What is music made of?',
-      2: 'What body part perceives sound?',
-      3: 'What sense involves the ear?',
-      4: 'What is hearing essential for?',
-      5: 'What is a tool for communication?',
+      1: 'A fundamental element of music is...',
+      2: 'A body part that perceives sound is...',
+      3: 'A sensory perception of sound is...',
+      4: 'A way of exchanging information is...',
     },
     explanations: [
       'Music is made of sounds.',
       'We hear sounds with our ears.',
       'Hearing is the sense of perceiving sound.',
       'Hearing is essential for spoken communication.',
-      'Language is a tool for communication.',
     ],
-  },
-]
+  }
+];
