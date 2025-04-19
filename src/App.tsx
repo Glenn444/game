@@ -6,8 +6,6 @@ import { HomeScreen } from './components/HomeScreen';
 import { Tutorial } from './components/Tutorial';
 import { GameComplete } from './components/GameComplete';
 import { getDailyFact, getDailyWordPath, saveGameResult, getCurrentWordPath } from './lib/game-service';
-import SupabaseFeedbackSystem from './components/Review';
-
 
 function shuffleChoices(choices: WordChoice[]): WordChoice[] {
   return [...choices].sort(() => Math.random() - 0.5);
@@ -231,7 +229,6 @@ function App() {
         pointsHistory={pointsHistory}
         darkMode={darkMode}
       />
-      <SupabaseFeedbackSystem />
     </div>
   );
 }

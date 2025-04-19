@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Trophy, AlertCircle, ArrowRight, MessageCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { createClient } from '@supabase/supabase-js';
 
 interface GameCompleteProps {
   score: number;
@@ -17,6 +18,9 @@ const FEEDBACK_EMOJIS = [
   { emoji: "🤔", label: "Confusing" },
   { emoji: "😴", label: "Too easy" }
 ];
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export function GameComplete({ score, path, wrongChoices, correctPath, onPlayAgain, darkMode = false }: GameCompleteProps) {
   const [showFeedback, setShowFeedback] = useState(false);
@@ -61,8 +65,15 @@ export function GameComplete({ score, path, wrongChoices, correctPath, onPlayAga
     setShowComment(true);
   };
 
-  const handleSubmitFeedback = () => {
+  const handleSubmitFeedback = async() => {
     setFeedbackSent(true);
+    const { error } = await supabase
+  .from('game_comments')
+  .insert({ emoji:selectedEmoji, comment })
+  if (error){
+    console.log("Eror inserting into db: ",error);
+    
+  }
     // Here you would typically send the feedback to your backend
     console.log('Feedback sent:', { emoji: selectedEmoji, comment });
   };
